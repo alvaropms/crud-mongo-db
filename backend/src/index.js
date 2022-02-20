@@ -21,7 +21,7 @@ mongoose.connection.on('error', (err) => {
 })
 
 app.use(cors({
-    origin: 'https://crud-mongo-db.vercel.app/'
+    origin: process.env.FRONT_URL
 }))
 app.use(express.json())
 app.use(routes)
