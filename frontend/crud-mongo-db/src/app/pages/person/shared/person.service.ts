@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Person } from 'src/app/models/person.model';
 import { SharedService } from 'src/app/shared/services/shared.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonService {
-  private apiPath: string = 'http://localhost:3333/person'
+  private apiPath: string = environment.url+'person'
 
   constructor(private sharedService: SharedService) { }
 

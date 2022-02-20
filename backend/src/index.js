@@ -5,9 +5,9 @@ const cors = require('cors')
 
 const app = express()
 
-const pass = 'cSYMFehVU5PkHr2d'
-const dbName = 'myFirstDb'
-const port = 3333
+const pass = process.env.PASSWORD
+const dbName = process.env.DB_NAME
+const port = process.env.PORT
 
 mongoose.connect(`mongodb+srv://alvi:${pass}@mycluster.tfj24.mongodb.net/
 ${dbName}?retryWrites=true&w=majority`)
