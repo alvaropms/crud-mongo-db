@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  url: 'http://localhost:3333/'
+  url: 'https://crud-mongo-db.herokuapp.com/'
 };
