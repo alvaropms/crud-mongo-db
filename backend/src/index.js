@@ -20,7 +20,9 @@ mongoose.connection.on('error', (err) => {
     console.log('Database error '+err);
 })
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://crud-mongo-db.vercel.app/'
+}))
 app.use(express.json())
 app.use(routes)
 app.listen(port, () => {
